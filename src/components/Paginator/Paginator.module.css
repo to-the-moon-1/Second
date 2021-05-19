@@ -1,0 +1,15 @@
+.item span {
+    color: #494450;
+    padding: 7px;
+    font-size: 16px;
+}
+
+span.selectedPage {
+    color: #494450;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item {
+    padding-bottom: 15px;
+}

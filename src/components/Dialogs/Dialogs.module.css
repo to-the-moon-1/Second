@@ -1,0 +1,34 @@
+.dialogsItems {
+    width: 30%;
+    float: left;
+}
+
+.dialogsItems a {
+    text-decoration: unset;
+    color: #494450;
+}
+
+.dialogsItems .active {
+    color: #796f86;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.dialog, .message {
+    color: #494450;
+    font-size: 18px;
+}
+
+.messages {
+    width: 70%;
+    float: left;
+}
+
+.message {
+
+}
+
+.dialogImg img {
+    border-radius: 50%;
+    width: 50px;
+}

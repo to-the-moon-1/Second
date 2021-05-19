@@ -1,0 +1,25 @@
+.nav {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    grid-area: n;
+    background-color: #796f86;
+    width: 25%;
+    float: left;
+    height: 1000px;
+}
+
+.item {
+    color: #ebe9ef;
+    font-size: 23px;
+    margin: 20px 25px;
+    font-style: italic;
+}
+
+.active {
+    color: gold;
+    font-size: 26px;
+}
+
+.settings {
+    margin-top: 45px;
+}
