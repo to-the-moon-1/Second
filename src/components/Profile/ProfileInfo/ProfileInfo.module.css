@@ -1,0 +1,18 @@
+.main {
+    display: block;
+}
+
+.mainPhoto {
+    width: 40%;
+    float: left;
+}
+
+.mainImg {
+    border-radius: 15px;
+}
+
+.mainContent {
+    width: 60%;
+    float: left;
+    height: 310px;
+}

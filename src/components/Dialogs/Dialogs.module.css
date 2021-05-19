@@ -6,29 +6,40 @@
 .dialogsItems a {
     text-decoration: unset;
     color: #494450;
+    position: relative;
+    bottom: 25px;
+    font-style: italic;
 }
 
-.dialogsItems .active {
+.activeDialog {
     color: #796f86;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .dialog, .message {
     color: #494450;
-    font-size: 18px;
+    font-size: 16px;
+}
+
+.dialog {
+    margin-bottom: 25px;
 }
 
 .messages {
     width: 70%;
     float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
 }
 
 .message {
 
 }
 
-.dialogImg img {
+.dialogImg {
     border-radius: 50%;
     width: 50px;
+    margin-right: 15px;
 }

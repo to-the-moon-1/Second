@@ -1,53 +1,32 @@
-import React from 'react';
-import classes from './Users.module.css';
-import userPhoto from '../../assets/images/user.png'
-import {NavLink} from "react-router-dom";
+import React, {useState} from 'react';
+import classes from './Paginator.module.css';
 
-let Users = (props) => {
+let Paginator = ({currentPage, onPageChanged, portionSize = 10}) => {
 
-    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    // let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
+    let pagesCount = 50;
 
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i)
     }
-    
-    return <div>
-        <div className={classes.item}>
-            {pages.map(p => {
-                return <span onClick={(e) => {props.onPageChanged(p)}} className={props.currentPage === p && classes.selectedPage}>{p}</span>
-            })}
-        </div>
-        {
-            props.users.map(u => <div key={u.id}>
-                <span>
-                    <div>
-                        <NavLink to={'/profile/' + u.id}>
-                            <img alt={'photo'} src={u.photos.small != null ? u.photos.small : userPhoto} className={classes.userPhoto} />
-                        </NavLink>
-                    </div>
-                    <div>
-                        {u.followed
-                            ? <button disabled={props.followingInProgress.some(id => id === u.id)}
-                                      onClick={() => {props.unfollow(u.id);}}>Unfollow</button>
 
-                            : <button disabled={props.followingInProgress.some(id => id === u.id)}
-                                      onClick={() => {props.follow( u.id);}}>Follow</button>}
-                    </div>
-                </span>
-                <span>
-                    <span>
-                        <div>{u.name}</div>
-                        <div>{u.status}</div>
-                    </span>
-                    <span>
-                        <div>{'u.location.country'}</div>
-                        <div>{'u.location.city'}</div>
-                    </span>
-                </span>
-            </div>)
-        }
-    </div>
+    let portionCount = Math.ceil(pagesCount / portionSize);
+    let [portionNumber, setPortionNumber] = useState(1);
+    let leftPortionPageNumber = (portionNumber - 1) * portionSize + 1;
+    let rightPortionPageNumber = portionNumber * portionSize;
+
+    return <div className={classes.item}>
+            {portionNumber > 1 &&
+            <button onClick={() => {setPortionNumber(portionNumber - 1)}}>Prev</button>}
+            {pages
+                .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
+                .map((p) => {
+                return <span key={p} onClick={(e) => {onPageChanged(p)}} className={currentPage === p ? [classes.pageNumber, classes.selectedPage].join(' ') : classes.pageNumber}>{p}</span>
+            })}
+            {portionCount > portionNumber &&
+            <button onClick={() => {setPortionNumber(portionNumber + 1)}}>Next</button>}
+        </div>
 }
 
-export default Users;
+export default Paginator;

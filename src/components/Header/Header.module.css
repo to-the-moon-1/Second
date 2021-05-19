@@ -9,3 +9,21 @@
     margin-top: 13px;
     opacity: 0.9;
 }
+
+.loginBlock {
+    margin-top: 23px;
+    float: right;
+    color: #ebe9ef;
+}
+
+.item,.btnLogout {
+    color: #ebe9ef;
+    text-decoration: unset;
+    font-size: 20px;
+}
+
+.btnLogout {
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}

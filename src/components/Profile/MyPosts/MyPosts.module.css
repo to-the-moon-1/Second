@@ -1,15 +1,3 @@
-.content {
-    grid-area: c;
-    background-color: #ebe9ef;
-    height: 1000px;
-    width: 75%;
-    float: left;
-}
-
-.content div img {
-    width: 900px;
-}
-
-.item {
-    color: darkolivegreen;
+.posts {
+    margin-top: 15px;
 }

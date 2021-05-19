@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Dialogs.module.css';
+import classes from './Music.module.css';
 
-const Dialogs = () => {
+const Music = () => {
     return <div>
-        Dialogs
+        Music
     </div>
 }
 
-export default Dialogs;
+export default Music;

@@ -1,10 +1,10 @@
 import React from 'react';
-import classes from './Dialogs.module.css';
+import classes from './Settings.module.css';
 
-const Dialogs = () => {
+const Settings = () => {
     return <div>
-        Dialogs
+        Settings
     </div>
 }
 
-export default Dialogs;
+export default Settings;
