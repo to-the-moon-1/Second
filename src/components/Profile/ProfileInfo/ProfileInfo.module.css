@@ -1,5 +1,5 @@
 .main {
-    display: block;
+    display: grid;
 }
 
 .mainPhoto {
@@ -9,10 +9,64 @@
 
 .mainImg {
     border-radius: 15px;
+    width: 300px;
 }
 
 .mainContent {
     width: 60%;
     float: left;
     height: 310px;
+}
+
+.newPhoto {
+    width: 148px;
+    position: relative;
+    top: -17px;
+    left: -5px;
+    opacity: 0;
+}
+
+.wrapNewPhoto {
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.name {
+    color: #494450;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.status {
+    color: #494450;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.input {
+    padding: 5px 10px;
+    background-color: unset;
+    border: unset;
+    border-bottom: 1px solid #494450;
+}
+
+.contacts {
+    margin-top: 10px;
+}
+
+.contactItem {
+    list-style-type: circle;
+}
+
+.formSummaryError {
+    border: 1px solid red;
+    padding: 5px;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

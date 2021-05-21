@@ -17,7 +17,7 @@ const MyPosts = (props) => {
         props.addPost(values.newPostText);
     }
 
-    return <div>
+    return <div className={classes.myPosts}>
         <h3>My posts</h3>
         <AddNewPostFormRedux onSubmit={onAddPost} />
         <div className={classes.posts}>
